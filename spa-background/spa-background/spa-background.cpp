@@ -4,6 +4,8 @@
 int main() {
   QueryParser *parser = new QueryParser();
 
-  std::string text = "stmt a, ;call meMaybe, ; read r1, r2, r3, r4; stmt s1 s2;`` assign kevinGroupLeader;";
-  parser->parse(text);
+  //std::string text = "stmt a; read a; print a; call meMaybe; while a; if a; assign kevinGroupLeader; variable v; constant c; procedure p, q, r, s; Select potato";
+  std::string text = "stmt a; Select 1abc";
+
+  std::cout << "Testing " << text << ": " << parser->parse(text) << "\n";
 }

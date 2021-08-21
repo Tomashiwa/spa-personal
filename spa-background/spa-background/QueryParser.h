@@ -5,10 +5,17 @@ class QueryParser {
 private:
   std::string text;
   std::string nextToken;
-  Query curr;
+  Query* curr;
 
 public:
-  std::string scanToken();
+  std::string peekToken();
+  void scanToken();
+
+  bool parseSelectCl();
+  bool parseSynonym();
+  bool parseDeclarations();
+
+
   /* bool parseInt();
   bool parseName();
   bool parseVarName();
@@ -21,11 +28,8 @@ public:
   bool parsePT();
   bool parseRel();
   bool parseST();
-  bool parseIden();
-  bool parseSyn();
+  bool parseIden();*/
   bool parseDE();
-  bool parseDel();
-  bool parseSel();*/
   bool parse(std::string);
   // Query retrieveQuery();
 };
