@@ -11,11 +11,12 @@ private:
 public:
   Query();
 
-  void selectSynonym(Synonym);
+  void selectSynonymByName(std::string);
   void addSynonym(Synonym);
   void addClause(Clause);
 
   Synonym* getSelected();
   std::vector<Clause> getClauses();
+  Synonym *getSynonym(std::string name);
   std::vector<Synonym> getSynonyms();
 };

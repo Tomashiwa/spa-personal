@@ -1,5 +1,6 @@
 #include "DesignEntity.h"
 #include <string>
+#include <iostream>
 
 class Synonym {
 private:
@@ -11,4 +12,5 @@ public:
 
   DesignEntity getType();
   std::string getName();
+  void print();
 };

@@ -5,16 +5,23 @@ class QueryParser {
 private:
   std::string text;
   std::string nextToken;
-  Query* curr;
+  Query* query;
+  DesignEntity entityType;
 
 public:
+  bool hasRemainingText();
+
   std::string peekToken();
   void scanToken();
 
+  Query retrieveQuery();
+  bool parse(std::string);
   bool parseSelectCl();
-  bool parseSynonym();
   bool parseDeclarations();
+  bool parseSelect();
+  bool parseSynonym();
 
+  bool parseDE();
 
   /* bool parseInt();
   bool parseName();
@@ -29,7 +36,4 @@ public:
   bool parseRel();
   bool parseST();
   bool parseIden();*/
-  bool parseDE();
-  bool parse(std::string);
-  // Query retrieveQuery();
 };

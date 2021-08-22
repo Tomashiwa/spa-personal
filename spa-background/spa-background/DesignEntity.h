@@ -8,5 +8,6 @@ enum class DesignEntity {
   Assign,
   Variable,
   Constant,
-  Procedure
+  Procedure,
+  Undefined,
 };
