@@ -5,10 +5,13 @@ Query::Query() { this->selected = nullptr; }
 void Query::selectSynonymByName(std::string name) { 
   for (Synonym s : synonyms) {
     if (s.getName() == name) {
-      selected = &s;
+      selected = new Synonym(s.getType(), s.getName());
+      break;
     }
   }
-  selected = new Synonym(DesignEntity::Undefined, name);
+  if (!selected) {
+    selected = new Synonym(DesignEntity::Undefined, name);
+  }
 }
 
 void Query::addSynonym(Synonym s) { synonyms.push_back(s); }

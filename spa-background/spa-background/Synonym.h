@@ -12,5 +12,6 @@ public:
 
   DesignEntity getType();
   std::string getName();
+
   void print();
 };
