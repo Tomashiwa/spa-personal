@@ -1,8 +1,8 @@
 #include "Synonym.h"
 
-Synonym::Synonym(DesignEntity type, std::string name) {
-  this->type = type;
-  this->name = name;
+Synonym::Synonym(DesignEntity t, std::string n) {
+  type = t;
+  name = n;
 }
 
 DesignEntity Synonym::getType() { return type; }

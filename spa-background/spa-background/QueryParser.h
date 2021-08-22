@@ -5,7 +5,7 @@ class QueryParser {
 private:
   std::string text;
   std::string nextToken;
-  Query* query;
+  Query query;
   DesignEntity entityType;
 
 public:

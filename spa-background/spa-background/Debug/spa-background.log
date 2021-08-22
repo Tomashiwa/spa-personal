@@ -1,9 +1,2 @@
-﻿  Query.cpp
-  QueryParser.cpp
-D:\Git repositories\spa-personal\spa-background\spa-background\QueryParser.cpp(6,33): warning C4129: 's': unrecognized character escape sequence
-D:\Git repositories\spa-personal\spa-background\spa-background\QueryParser.cpp(48,21): warning C4018: '<': signed/unsigned mismatch
-  Synonym.cpp
-  spa-background.cpp
-  Generating Code...
-D:\Git repositories\spa-personal\spa-background\spa-background\Query.cpp(24): warning C4172: returning address of local variable or temporary: s
+﻿  spa-background.cpp
   spa-background.vcxproj -> D:\Git repositories\spa-personal\spa-background\Debug\spa-background.exe

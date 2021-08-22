@@ -8,7 +8,7 @@ private:
   std::string name;
 
 public:
-  Synonym(DesignEntity type, std::string name);
+  Synonym(DesignEntity, std::string);
 
   DesignEntity getType();
   std::string getName();

@@ -4,7 +4,7 @@
 
 class Query {
 private:
-  Synonym* selected;
+  Synonym selected;
   std::vector<Synonym> synonyms;
   std::vector<Clause> clauses;
 
@@ -15,8 +15,8 @@ public:
   void addSynonym(Synonym);
   void addClause(Clause);
 
-  Synonym* getSelected();
+  Synonym getSelected();
   std::vector<Clause> getClauses();
-  Synonym *getSynonym(std::string name);
+  Synonym getSynonym(std::string name);
   std::vector<Synonym> getSynonyms();
 };

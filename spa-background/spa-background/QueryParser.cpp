@@ -24,7 +24,7 @@ void QueryParser::scanToken() {
 
   if (std::regex_search(text, match, token)) {
     nextToken = match[0];
-    std::cout << nextToken << "\n";
+    //std::cout << nextToken << "\n";
 
     size_t pos = text.find(match[0]);
     if (pos != std::string::npos) {
@@ -35,24 +35,21 @@ void QueryParser::scanToken() {
   }
 }
 
-Query QueryParser::retrieveQuery() { return *query; }
+Query QueryParser::retrieveQuery() { return query; }
 
 bool QueryParser::parse(std::string str) {
   text = str;
-  query = new Query();
 
   bool hasParseSucceed = parseSelectCl();
 
   std::cout << "--Synonyms--\n";
-  std::vector<Synonym> synonyms = query->getSynonyms();
+  std::vector<Synonym> synonyms = query.getSynonyms();
   for (int i = 0; i < synonyms.size(); i++) {
     synonyms[i].print();
   }
 
   std::cout << "--Selected Synonym--\n";
-  if (query->getSelected()) {
-    query->getSelected()->print();
-  }
+  query.getSelected().print();
 
   // std::cout << "--Clauses--\n";
 
@@ -72,7 +69,7 @@ bool QueryParser::parseSelectCl() {
     return false;
   }
 
-  query->selectSynonymByName(nextToken);
+  query.selectSynonymByName(nextToken);
 
   // Parse clauses here...
 
@@ -95,14 +92,14 @@ bool QueryParser::parseDeclarations() {
       return false;
     }
 
-    query->addSynonym(Synonym(entityType, nextToken));
+    query.addSynonym(Synonym(entityType, nextToken));
     scanToken();
 
     while (nextToken == ",") {
       if (!parseSynonym()) {
         return false;
       }
-      query->addSynonym(Synonym(entityType, nextToken));
+      query.addSynonym(Synonym(entityType, nextToken));
       scanToken();
     }
 
