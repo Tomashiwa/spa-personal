@@ -6,5 +6,4 @@ Clause::Clause(ClauseType t, std::vector<std::string> p) {
 }
 
 ClauseType Clause::getType() { return type; }
-
 std::vector<std::string> Clause::getParams() { return params; }

@@ -5,10 +5,6 @@ Synonym::Synonym(DesignEntity t, std::string n) {
   name = n;
 }
 
-DesignEntity Synonym::getType() { return type; }
-
-std::string Synonym::getName() { return name; }
-
 void Synonym::print() {
   switch (type) {
   case DesignEntity::Statement:
@@ -47,3 +43,6 @@ void Synonym::print() {
   }
   std::cout << " " << name << "\n";
 }
+
+DesignEntity Synonym::getType() { return type; }
+std::string Synonym::getName() { return name; }

@@ -11,7 +11,8 @@ int main() {
   //std::string text = "read 123r1; Select r1";
   //std::string text = "stmt s1, s2 Select s1";
   //std::string text = "assign a; variable v;Select v		\n\n	 \n \n	";
-  std::string text = "procedure procedure; Select procedure";
+  //std::string text = "procedure procedure; Select procedure";
+  std::string text = "stmt s1; stmt s2; \n\n Select s2";
 
   std::cout << text << "\n";
   std::cout << "Is this valid ? " << parser.parse(text) << "\n ";

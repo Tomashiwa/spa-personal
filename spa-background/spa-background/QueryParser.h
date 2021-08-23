@@ -8,21 +8,14 @@ private:
   Query query;
   DesignEntity entityType;
 
-public:
-  bool hasRemainingText();
-
   std::string peekToken();
   void scanToken();
-
-  Query retrieveQuery();
-  bool parse(std::string);
+  
   bool parseSelectCl();
   bool parseDeclarations();
   bool parseSelect();
   bool parseSynonym();
-
   bool parseDE();
-
   /* bool parseInt();
   bool parseName();
   bool parseVarName();
@@ -36,4 +29,10 @@ public:
   bool parseRel();
   bool parseST();
   bool parseIden();*/
+
+  bool hasRemainingText();
+
+public:
+  bool parse(std::string);
+  Query retrieveQuery();
 };

@@ -15,6 +15,7 @@ void Query::selectSynonymByName(std::string name) {
 
 void Query::addSynonym(Synonym s) { synonyms.push_back(s); }
 void Query::addClause(Clause c) { clauses.push_back(c); }
+
 Synonym Query::getSelected() { return selected; }
 
 Synonym Query::getSynonym(std::string name) {

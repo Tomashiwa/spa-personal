@@ -10,8 +10,8 @@ private:
 public:
   Synonym(DesignEntity, std::string);
 
+  void print();
+
   DesignEntity getType();
   std::string getName();
-
-  void print();
 };
